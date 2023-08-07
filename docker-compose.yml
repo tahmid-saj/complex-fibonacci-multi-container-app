@@ -16,6 +16,9 @@ services:
       context: ./nginx
     ports:
       - "3050:80"
+    depends_on:
+      - api
+      - client
 
   api:
     build:
