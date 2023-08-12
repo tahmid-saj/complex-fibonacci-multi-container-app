@@ -18,7 +18,7 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # Take images and push to docker hub
-  - docker push tahmid-saj/multi-client
-  - docker push tahmid-saj/multi-nginx
-  - docker push tahmid-saj/multi-server
-  - docker push tahmid-saj/multi-worker
+  - docker push tahmidsaj/multi-client
+  - docker push tahmidsaj/multi-nginx
+  - docker push tahmidsaj/multi-server
+  - docker push tahmidsaj/multi-worker
