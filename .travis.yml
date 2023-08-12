@@ -13,3 +13,12 @@ after_success:
   - docker build -t tahmid-saj/multi-nginx ./nginx
   - docker build -t tahmid-saj/multi-server ./server
   - docker build -t tahmid-saj/multi-worker ./worker
+
+  # Login to docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+  # Take images and push to docker hub
+  - docker push tahmid-saj/multi-client
+  - docker push tahmid-saj/multi-nginx
+  - docker push tahmid-saj/multi-server
+  - docker push tahmid-saj/multi-worker
