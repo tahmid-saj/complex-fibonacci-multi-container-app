@@ -4,7 +4,20 @@
     {
       "name": "client",
       "image": "tahmidsaj/multi-client",
-      "hostname": "client"
+      "hostname": "client",
+      "essential": false
+    },
+    {
+      "name": "server",
+      "image": "tahmidsaj/multi-server",
+      "hostname": "api",
+      "essential": false
+    },
+    {
+      "name": "worker",
+      "image": "tahmidsaj/multi-worker",
+      "hostname": "worker",
+      "essential": false
     }
   ]
 }
